@@ -654,6 +654,7 @@ body {
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 2;
+  overflow-y: scroll;
   -webkit-transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
   transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
 }
@@ -661,6 +662,11 @@ body {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+@media screen and (min-width: 768px) {
+  .backdrop {
+    overflow-y: inherit;
+  }
 }
 
 .modal {

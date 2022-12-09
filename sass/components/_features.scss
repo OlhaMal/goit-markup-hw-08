@@ -38,7 +38,7 @@
 }
 
 .features__title {
-    @include font (bold, 14px, 16/14, 0.03em);
+    @include font (bold, 14px, calc(16/14), 0.03em);
     text-transform: uppercase;
     color: $primary-color;
     text-align: center;
@@ -50,7 +50,7 @@
 }
 
 .features__text {
-    @include font (normal, 14px, 24/14, 0.03em);
+    @include font (normal, 14px, calc(24/ 14), 0.03em);
     color: $secondary-color;
     text-align: left;
 }

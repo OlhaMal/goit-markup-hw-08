@@ -7,6 +7,7 @@
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 2;
+    overflow-y: scroll;
     transition: opacity  250ms ease-in-out,
     visibility 250ms ease-in-out;
 
@@ -14,6 +15,10 @@
         opacity: 0;
         pointer-events: none;
         visibility: hidden;
+    }
+
+    @media screen and (min-width: $tablet) {
+        overflow-y: inherit;
     }
   }
 
