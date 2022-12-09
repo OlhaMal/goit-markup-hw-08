@@ -915,7 +915,6 @@ body {
   line-height: 1.75;
   letter-spacing: 0.03em;
   color: #fff;
-  overflow-y: scroll;
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(101%);
           transform: translateY(101%);
@@ -935,7 +934,7 @@ body {
 @media screen and (max-width: 480px) {
   .img-wrapper__text-overlay {
     padding: 77px 24px;
-    overflow-y: inherit;
+    overflow-y: scroll;
   }
 }
 @media screen and (min-width: 768px) {
