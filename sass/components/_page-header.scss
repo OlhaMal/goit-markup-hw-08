@@ -1,0 +1,136 @@
+.header {
+    border-bottom: 1px solid #ececec;
+    padding: 16px 0;
+
+    &__container {
+        @include centeredFlex (flex, none, center);
+    }
+
+    @media screen and (min-width: $tablet) {
+        padding: 0;
+    }
+}
+
+.logo {
+    @extend %mobile-logo;
+    display: block;
+
+    &--black {
+        color: black;
+    }
+
+    @media screen and (min-width: $desctop) {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+}
+
+.navbar {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        margin-left: 88px;
+    }
+
+    @media screen and (min-width: $desctop) {
+        margin-left: 93px;
+    }
+}
+
+.navbar__item {
+    margin-right: 50px;
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &--active::after {
+        content: "";
+        position: relative;
+        bottom: -1px;
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #2196f3;
+        border-radius: 2px;
+    }
+}
+
+.navbar__link {
+    @include font (500, 14px, 1.2, 0.02em);
+    display: block;
+    padding: 32px 0;
+    color: $primary-color;
+    @include transition (color);
+
+    &--active {
+        color: $brand-color;
+    }
+
+    &:hover,
+    &:focus {
+        color: $brand-color;
+    }
+}
+
+.contacts {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: auto;
+    }
+
+    @media screen and (min-width: $desctop) {
+        flex-direction: row;
+        gap: 50px;
+
+        &__item {
+            padding: 32px 0;
+            @include centeredFlex (flex, none, center);
+        }
+    }
+}
+
+.contacts__link {
+    @include centeredFlex (flex, none, center);
+    @include font (500, 14px, 1.2, 0.02em);
+    color: $secondary-color;
+    @include transition (color);
+
+    &:hover,
+    &:focus {
+        color: $brand-color;
+    }
+}
+
+.contacts__icon {
+    margin-right: 8px;
+
+    @media screen and (min-width: $desctop) {
+        margin-right: 10px;
+    }
+}
+
+.mobile-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    background-color: $basic-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: none;
+    margin-left: auto;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.icon {
+    fill: currentColor;
+    display: block;
+}

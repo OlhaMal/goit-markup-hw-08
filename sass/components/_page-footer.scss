@@ -1,0 +1,179 @@
+.footer {
+    padding: 60px 0;
+    background-color: $primary-background;
+    text-align: center;
+
+    @media screen and (min-width: $desctop) {
+        min-height: 252px;
+        padding-top: 60px;
+        text-align: inherit;
+    }
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    @media screen and (min-width: $tablet) and (max-width: 1199.93px) {
+        flex-direction: unset;
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+
+    @media screen and (min-width: $desctop) {
+        flex-direction: inherit;
+        gap: 0;
+        align-items: baseline;
+    }
+}
+
+.address {
+    @media screen and (min-width: $tablet) and (max-width: 1199.93px) {
+        margin-left: 76px;
+    }
+
+    @media screen and (min-width: $desctop) {
+        margin-right: 70px;  
+    }
+}
+
+.logo {
+    @extend %mobile-logo;
+
+    &--white {
+        color: $basic-white;
+    }
+}
+
+.footer-contacts {
+    margin-top: 20px;
+}
+
+.footer-contacts__item {
+    margin-bottom: 8px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $desctop) {
+        margin-bottom: 9px;
+    }
+}
+
+.footer-contacts__link {
+    font-style: normal;
+    @include font (normal, 14px, 1.71, 0.03em);
+    color: rgba(255, 255, 255, 0.6);
+    @include transition (color);
+
+    &:hover,
+    &:focus {
+        color: $brand-color;
+    }
+
+    &--white {
+        color: $basic-white;
+    }
+}
+
+.media {
+    @media screen and (min-width: $tablet) and (max-width: 1199.93px) {
+        margin-left: auto;
+        margin-right: 88px;
+    }
+}
+
+.media__title {
+    @extend %subtitle;
+}
+
+.media__list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    @media screen and (min-width: $desctop) {
+        justify-content: inherit;
+    }
+}
+
+.media__link {
+    @include centeredFlex (flex, center, center);
+    width: 44px;
+    height: 44px;
+    color: $basic-white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    @include transition (background-color);
+
+    &:hover,
+    &:focus {
+        background-color: $brand-color;
+    }
+}
+
+.subscription {
+    @media screen and (min-width: $tablet) and (max-width: 1199.93px) {
+        margin-left: 166px;
+    }
+
+    @media screen and (min-width: $desctop) {
+        margin-left: auto;
+    }
+}
+
+.subscription__text {
+    @extend %subtitle;
+}
+
+.subscription__form {
+    display: flex;
+    gap: 20px;   
+    flex-direction: column;
+
+    @media screen and (min-width: $desctop) {
+        gap: 12px;
+        flex-direction: inherit;
+    }
+}
+
+.subscription__input {
+    background-color: var(--primary-background) ;
+    width: calc((100% - 2 * 15px) / 1);
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding: 15px 16px;
+    @include font (normal, 16px, calc(20/16), 0.03em);
+    color: rgba(255, 255, 255, 0.6);
+
+    @media screen and (min-width: $tablet){
+        width: 450px;
+    }
+
+    @media screen and (min-width: $desctop) {
+        width: 358px;
+    }
+}
+
+.subscription__btn {
+    @extend %btn;
+    @include centeredFlex (flex, center, center);
+    gap: 12px;
+    width: 200px;
+    height: 50px;
+    @include font (700, 16px, calc(30/16), 0.06em);
+    margin: 0 auto;
+
+    &:active {
+        background-color: #188CE8;
+    }
+
+    @media screen and (min-width: $desctop) {
+        gap: 10px;
+        
+    }
+}

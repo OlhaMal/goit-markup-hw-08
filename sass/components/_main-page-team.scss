@@ -1,0 +1,92 @@
+.team {
+    background-color: #f5f4fa;
+
+    @media screen and (min-width: $desctop) {
+        min-height: 648px;
+    }
+}
+
+.team__title {
+    @extend %mobile-title;
+
+    @media screen and (min-width: $desctop) {
+        letter-spacing: 0.03em;
+        font-size: 36px;
+        line-height: calc(36/42);
+        margin-bottom: 50px;
+    }
+}
+
+.team__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $tablet)  and (max-width: 1199.93px) {
+        gap: 0;
+        margin-left: -30px;
+        margin-top: -30px;
+    }
+
+    @media screen and (min-width: $desctop) {
+        flex-wrap: nowrap;
+    }
+}
+
+.team__card {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    @media screen and (min-width: $tablet) and (max-width: 1199.93px) {
+        flex-basis: calc((100% - 60px)/2);
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+}
+
+.card-info {
+    background-color: $basic-white;
+    padding-top: 30px;
+    padding-bottom: 24px;
+
+    @media screen and (min-width: $desctop) {
+        padding: 30px 0;
+    }
+}
+
+.card-info__title {
+    @include font (500, 16px, 1.2, 0.03em);
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card-info__text {
+    color: $secondary-color;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+}
+
+.socials {
+    @include centeredFlex (flex, center, center);
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.socials__link {
+    @include centeredFlex (flex, center, center);
+    background-color: transparent;
+    border-radius: 50%;
+    color: $faint-gray-color;
+    width: 44px;
+    height: 44px;
+    @include transition (color background-color);
+
+    &:hover,
+    &:focus {
+        color: $basic-white;
+        background-color: $brand-color;
+    }
+}

@@ -1,0 +1,56 @@
+.features {
+    @media screen and (min-width: $desctop) {
+        min-height: 286px;
+    }
+}
+
+.features__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media screen and (min-width: $desctop) {
+        flex-wrap: nowrap;
+    }
+}
+
+.features__item {
+    @media screen and (min-width: $tablet) and (max-width: 1199.99px) {
+        flex-basis: calc((100% - 60px)/2);
+    }
+}
+
+.features__icon {
+    @include centeredFlex (flex, center, center);
+    background-color: $light-background;
+    max-width: 450px;
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $tablet) {
+        width: 354px;
+    }
+
+    @media screen and (min-width: $desctop) {
+        width: 270px;
+    }
+}
+
+.features__title {
+    @include font (bold, 14px, 16/14, 0.03em);
+    text-transform: uppercase;
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: $tablet) {
+        text-align: left;
+    }
+}
+
+.features__text {
+    @include font (normal, 14px, 24/14, 0.03em);
+    color: $secondary-color;
+    text-align: left;
+}

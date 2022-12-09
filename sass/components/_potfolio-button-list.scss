@@ -1,0 +1,30 @@
+.portfolio-cards {
+    min-height: 1360px;
+}
+
+.button-list {
+    @include centeredFlex (flex, center, none);
+    gap: 8px;
+    margin-bottom: 50px;
+}
+
+.button-list__filter {
+    @include font (500, 16px, 1.62, 0.03em);
+    text-align: center;
+    color: $primary-color;
+    width: 125px;
+    height: 38px;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    border-style: none;
+    @include transition (background-color box-shadow border-radius color);
+
+    &:hover,
+    &:focus {
+        background-color: $brand-color;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        color: $basic-white;
+    }
+}
